@@ -8,7 +8,7 @@ import useStyles from './style.js';
 const Header = () => {
     const classes = useStyles();
     return (
-        <AppBar positon="static">
+        <AppBar position="static">
             <Toolbar className={classes.toolbar}>
                 <Typography variant="h5" className={classes.title}>
                     Travel Advisor
