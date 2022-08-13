@@ -10,7 +10,7 @@ const App = () => {
         <div>
             <CssBaseline />
             <Header />
-            <Grid container spacing={3} style={{width: '100%'}}>
+            <Grid container spacing={3} style={{width: '100%', margin: '0px'}}>
                 <Grid item xs={12} md={4}>
                     <List />
                 </Grid>
@@ -25,6 +25,7 @@ const App = () => {
 /*
 xs={12} this means that this grid is going to take full width on mobile devices
 md={4} on medium and larger devices only going to take 4 spaces
+margin: '0px' also for mobile devices
 */
 
 export default App;
