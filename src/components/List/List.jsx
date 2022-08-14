@@ -8,6 +8,12 @@ const List = () => {
     const [type, setType] = useState('restaurants');
     const [rating, setRating] = useState('');
 
+    const places = [
+        {name: 'Cool Place'},
+        {name: 'Best Beer'},
+        {name: 'Best Steak'}
+    ];
+
 
     return (
         <div className={classes.container}>
@@ -29,8 +35,22 @@ const List = () => {
                     <MenuItem value={4.5}>Above 4.5</MenuItem>                   
                 </Select>
             </FormControl>
+            <Grid container spacing={3} className={classes.list}>
+                {places?.map((place, i) => (
+                    <Grid item key={i} xs={12}>
+                       <CARD/>     
+                    </Grid>
+                ))}
+            </Grid>
         </div>
     );
 }
 
 export default List;
+
+/*
+plases?   -> this means only if you have places only then map over them
+map takes in a callback function and then in each interation of callback it has one new place
+(place, i) -> index is always given to you as the second parameter
+{} = () in this case we only need parentheses because we're going to instantly return
+*/
