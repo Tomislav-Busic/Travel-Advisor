@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { CircularProgress, Grid, Typography, InputLabel, MenuItem, FormControl, Select } from '@material-ui/core';
 import useStyles from './style';
 
+import PlaceDetails from '../PlaceDetails/PlaceDetails';
+
 
 const List = () => {
     const classes = useStyles();
@@ -9,6 +11,12 @@ const List = () => {
     const [rating, setRating] = useState('');
 
     const places = [
+        {name: 'Cool Place'},
+        {name: 'Best Beer'},
+        {name: 'Best Steak'},
+        {name: 'Cool Place'},
+        {name: 'Best Beer'},
+        {name: 'Best Steak'},
         {name: 'Cool Place'},
         {name: 'Best Beer'},
         {name: 'Best Steak'}
@@ -38,7 +46,7 @@ const List = () => {
             <Grid container spacing={3} className={classes.list}>
                 {places?.map((place, i) => (
                     <Grid item key={i} xs={12}>
-                       <CARD/>     
+                       <PlaceDetails place={place}/>     
                     </Grid>
                 ))}
             </Grid>
