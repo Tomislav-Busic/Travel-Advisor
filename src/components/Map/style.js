@@ -4,6 +4,9 @@ export default makeStyles(() => ({
   paper: {
     padding: '10px', display: 'flex', flexDirection: 'column', justifyContent: 'center', width: '100px',
   },
+  papersm: {
+    padding: '5px', display: 'flex', flexDirection: 'column', justifyContent: 'center', width: '60px',
+  },
   mapContainer: {
     height: '85vh', width: '100%',
   },
