@@ -34,14 +34,14 @@ const List = ({places, childClicked, isLoading, type, setType, rating, setRating
                 </Select>
             </FormControl>
             <FormControl className={classes.formControl}>
-                <InputLabel>Rating</InputLabel>
-                <Select value={rating} onChange={(e) => setRating(e.target.value)}>
-                    <MenuItem value={0}>All</MenuItem>
-                    <MenuItem value={3}>Above 3</MenuItem>
-                    <MenuItem value={4}>Above 4</MenuItem>                   
-                    <MenuItem value={4.5}>Above 4.5</MenuItem>                   
-                </Select>
-            </FormControl>
+            <InputLabel id="rating">Rating</InputLabel>
+            <Select id="rating" value={rating} onChange={(e) => setRating(e.target.value)}>
+              <MenuItem value="">All</MenuItem>
+              <MenuItem value="3">Above 3.0</MenuItem>
+              <MenuItem value="4">Above 4.0</MenuItem>
+              <MenuItem value="4.5">Above 4.5</MenuItem>
+            </Select>
+          </FormControl>
             <Grid container spacing={3} className={classes.list}>
                 {places?.map((place, i) => (
                     <Grid ref={elRefs[i]} item key={i} xs={12}>
